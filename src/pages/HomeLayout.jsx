@@ -9,7 +9,7 @@ const HomeLayout = () => {
  <section className="align-element py-20">
     <Outlet/>
  </section>
- <Outlet/>
+ 
  </>
   );
 };
