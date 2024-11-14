@@ -6,6 +6,10 @@ const themes = {
   synthwave: "synthwave",
 };
 
+const getUserFromLocalStorage = () => {
+  return JSON.parse(localStorage.getItem('user')) || null;
+};
+
 const getThemeFromLocalStorages = () => {
   const theme = localStorage.getItem("theme") || themes.acid;
    document.documentElement.setAttribute("data-theme", theme);
@@ -13,8 +17,8 @@ const getThemeFromLocalStorages = () => {
 };
 
 const initialState = {
-  user: { username: "coding addict" },
-  theme: getThemeFromLocalStorages()
+  user: getUserFromLocalStorage(),
+  theme: getThemeFromLocalStorages(),
 };
 
 const userSlice = createSlice({
@@ -22,10 +26,14 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     loginUser: (state, action) => {
-      console.log("login");
+      const user ={...action.payload.user, token:action.payload.jwt}
+      state.user = user
+      localStorage.setItem('user',JSON.stringify(user))
     },
-    loginUser: (state) => {
-      console.log("login");
+    logoutUser: (state) => {
+      state.user = null;
+      localStorage.removeItem('user');
+      toast.success('Logged out successfully')
     },
     toggleTheme: (state) => {
       const {synthwave, acid} = themes;

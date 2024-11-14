@@ -5,7 +5,7 @@ import FormRange from "./FormRange";
 import FormCheckbox from "./FormCheckbox";
 const Filters = () => {
   const {meta,params} = useLoaderData();
-  const {search,company,category, shipping, order, price } = params
+  const {search, company, category, shipping, order, price } = params
 
   return (
     <Form
