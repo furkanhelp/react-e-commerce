@@ -24,10 +24,10 @@ The Furniture Store is a modern e-commerce web application designed to showcase 
 <br>
 
 ## Built with 
-
+- React, Vite
 - JavaScript
 - Semantic HTML5 markup
-- CSS custom properties
+- Tailwind, CSS custom properties
 - Mobile-first workflow
 
 
