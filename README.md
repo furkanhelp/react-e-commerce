@@ -1,6 +1,8 @@
-<p>Dark</p>
+<p>Dark</p> 
+
 ![Screenshot 2024-11-16 152334](https://github.com/user-attachments/assets/22c46f47-d545-4cb2-ac51-ec7461b69450)
 <p>Light</p>
+
 ![Screenshot 2024-11-16 152407](https://github.com/user-attachments/assets/c9923afd-d62d-4f62-94c7-af564fa90f92)
 
 <h1 align="center">Furniture Store</h1>
